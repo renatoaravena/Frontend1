@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nombre": "Super Mario Bros 3",
+    "plataforma": "NES",
+    "precio": 29990,
+    "stock": 4,
+    "imagen": "assets/img/super_mario_bros.jpg",
+    "descripcion": "Cartucho original de 1990 en muy buen estado, probado y funcionando. Incluye caja protectora."
+  },
+  {
+    "id": 2,
+    "nombre": "Pokémon Esmeralda CIB",
+    "plataforma": "Game Boy Advance",
+    "precio": 450000,
+    "stock": 1,
+    "imagen": "assets/img/pokemon_esmeralda.jpg",
+    "descripcion": "Edición completa en caja (CIB) con manual original. Batería interna reemplazada, guarda partida sin problemas."
+  },
+  {
+    "id": 3,
+    "nombre": "Resident Evil 5",
+    "plataforma": "PlayStation 3",
+    "precio": 15000,
+    "stock": 6,
+    "imagen": "assets/img/resident_evil_5.jpg",
+    "descripcion": "Disco sin rayas, caja y portada originales. Modo cooperativo para dos jugadores."
+  },
+  {
+    "id": 4,
+    "nombre": "The Last of Us Parte 1",
+    "plataforma": "PlayStation 5",
+    "precio": 30000,
+    "stock": 8,
+    "imagen": "assets/img/the_last_of_us.jpg",
+    "descripcion": "Remake completo del primer juego con gráficos mejorados y audio 3D."
+  }
+]
