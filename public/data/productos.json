@@ -5,7 +5,7 @@
     "plataforma": "NES",
     "precio": 29990,
     "stock": 4,
-    "imagen": "assets/img/super_mario_bros.jpg",
+    "imagen": "img/super_mario_bros.jpg",
     "descripcion": "Cartucho original de 1990 en muy buen estado, probado y funcionando. Incluye caja protectora."
   },
   {
@@ -14,7 +14,7 @@
     "plataforma": "Game Boy Advance",
     "precio": 450000,
     "stock": 1,
-    "imagen": "assets/img/pokemon_esmeralda.jpg",
+    "imagen": "img/pokemon_esmeralda.jpg",
     "descripcion": "Edición completa en caja (CIB) con manual original. Batería interna reemplazada, guarda partida sin problemas."
   },
   {
@@ -23,7 +23,7 @@
     "plataforma": "PlayStation 3",
     "precio": 15000,
     "stock": 6,
-    "imagen": "assets/img/resident_evil_5.jpg",
+    "imagen": "img/resident_evil_5.jpg",
     "descripcion": "Disco sin rayas, caja y portada originales. Modo cooperativo para dos jugadores."
   },
   {
@@ -32,7 +32,7 @@
     "plataforma": "PlayStation 5",
     "precio": 30000,
     "stock": 8,
-    "imagen": "assets/img/the_last_of_us.jpg",
+    "imagen": "img/the_last_of_us.jpg",
     "descripcion": "Remake completo del primer juego con gráficos mejorados y audio 3D."
   }
 ]

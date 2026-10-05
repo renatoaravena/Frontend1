@@ -1,0 +1,17 @@
+# Dependencias y compilados
+node_modules
+dist
+dist-ssr
+*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Configuración local de herramientas
+.claude
+
+# Sistema operativo
+Thumbs.db
+.DS_Store

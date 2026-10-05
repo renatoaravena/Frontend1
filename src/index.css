@@ -17,6 +17,12 @@ body {
     min-height: 100vh;
 }
 
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .text-acento {
     color: var(--amarillo);
 }
@@ -52,6 +58,19 @@ body {
     color: var(--celeste);
 }
 
+/* Las opciones del menú son botones porque cambian de vista con JavaScript,
+   así que se les quita la apariencia por defecto de botón */
+.navbar-gamestore .btn-link {
+    text-decoration: none;
+    color: #f2f2f2;
+}
+
+.navbar-gamestore .navbar-brand.btn-link {
+    color: var(--rosado);
+    font-size: 1.25rem;
+    padding: 0;
+}
+
 .portada {
     background: linear-gradient(180deg, var(--fondo-oscuro), var(--fondo));
     border-bottom: 2px solid var(--fondo-caja);
@@ -77,9 +96,10 @@ body {
     border-bottom: 1px solid #444;
 }
 
-/* El desplazamiento solo corresponde cuando el carrito queda fijo (sticky-lg-top) */
+/* El carrito queda fijo al hacer scroll solo en pantallas grandes */
 @media (min-width: 992px) {
     .carrito-fijo {
+        position: sticky;
         top: 90px;
     }
 }
