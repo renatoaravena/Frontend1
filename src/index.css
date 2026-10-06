@@ -96,6 +96,13 @@ body {
     border-bottom: 1px solid #444;
 }
 
+/* La imagen dentro de la ventana de detalle no debe pasarse de alto */
+.imagen-detalle {
+    max-height: 260px;
+    display: block;
+    margin: 0 auto;
+}
+
 /* El carrito queda fijo al hacer scroll solo en pantallas grandes */
 @media (min-width: 992px) {
     .carrito-fijo {

@@ -1,7 +1,7 @@
 import ProductoCard from './ProductoCard'
 
 // Recorre el catálogo y arma una tarjeta por producto.
-function ProductoList({ productos, carrito, busqueda, mostrarCarrito, onAgregar }) {
+function ProductoList({ productos, carrito, busqueda, mostrarCarrito, onAgregar, onVerDetalle }) {
   // Renderizado condicional: aviso cuando la búsqueda no encuentra nada
   if (productos.length === 0) {
     return (
@@ -26,6 +26,7 @@ function ProductoList({ productos, carrito, busqueda, mostrarCarrito, onAgregar 
               enCarrito={Boolean(enCarrito)}
               sinStock={Boolean(enCarrito) && enCarrito.cantidad >= producto.stock}
               onAgregar={onAgregar}
+              onVerDetalle={onVerDetalle}
             />
           </div>
         )

@@ -24,6 +24,7 @@ interfaz al estado actual.
 │   │   ├── ProductoList.jsx  Recorre el catálogo y arma las tarjetas
 │   │   ├── ProductoCard.jsx  Tarjeta individual de producto
 │   │   ├── Carrito.jsx       Resumen del carrito y cierre de compra
+│   │   ├── ModalProducto.jsx Ventana con el detalle de un producto
 │   │   ├── Contacto.jsx      Formulario de contacto con validación
 │   │   └── Footer.jsx        Pie de página
 │   ├── utils/formato.js      Función compartida para dar formato a los precios
@@ -44,12 +45,13 @@ recurso estático y `fetch` puede pedirlo en tiempo de ejecución, igual que una
 | `useState` — carrito | `carrito` en `App.jsx`, con agregar, quitar y vaciar |
 | `useState` — elemento interactivo | `vista`, `mostrarCarrito` y `busqueda` en `App.jsx`; `menuAbierto` en `Navbar`; el formulario de `Contacto` |
 | `useEffect` — carga de datos | Carga `public/data/productos.json` al montar el componente |
-| `useEffect` — con limpieza | Borra el mensaje de compra a los 6 segundos y cancela el temporizador |
+| `useEffect` — con limpieza | Borra el mensaje de compra a los 6 segundos y cancela el temporizador; en `ModalProducto` escucha la tecla Escape y quita el listener al cerrar |
 | Renderizado condicional — mensaje | Carrito vacío, búsqueda sin resultados y alerta de error |
 | Renderizado condicional — botón | "Agregar al carrito" → "✓ En el carrito" → "Sin stock disponible" |
 | Renderizado condicional — vista | Navega entre Catálogo y Contacto desde el menú; el botón alterna entre "Ver carrito" y "Ocultar carrito" y el catálogo se ensancha |
 | Props | `App` entrega datos y funciones a `Navbar`, `ProductoList`, `ProductoCard` y `Carrito` |
 | Finalizar compra | Muestra el total cobrado, agradece y deja el carrito vacío |
+| Ver detalle | Ventana emergente con la ficha del producto, montada solo al seleccionarlo |
 | Formulario de contacto | Campos controlados con `useState` y validación propia antes de enviar |
 
 ## Ejecutar en local

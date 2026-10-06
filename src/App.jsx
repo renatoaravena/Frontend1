@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
 import ProductoList from './components/ProductoList'
 import Carrito from './components/Carrito'
+import ModalProducto from './components/ModalProducto'
 import Contacto from './components/Contacto'
 import Footer from './components/Footer'
 import { formatearPrecio } from './utils/formato'
@@ -19,6 +20,9 @@ function App() {
   // Estado del carrito de compras
   const [carrito, setCarrito] = useState([])
   const [mensajeCompra, setMensajeCompra] = useState('')
+
+  // Producto que se muestra en la ventana de detalle (null = ventana cerrada)
+  const [productoDetalle, setProductoDetalle] = useState(null)
 
   // Estados de los elementos interactivos de la interfaz
   const [vista, setVista] = useState('catalogo')
@@ -114,6 +118,10 @@ function App() {
     setCarrito([])
   }
 
+  // Datos que necesita la ventana de detalle para dibujar su botón
+  const detalleEnCarrito = carrito.find((item) => item.id === productoDetalle?.id)
+  const cerrarDetalle = () => setProductoDetalle(null)
+
   const productosFiltrados = productos.filter((producto) => {
     const texto = busqueda.toLowerCase()
     return (
@@ -183,6 +191,7 @@ function App() {
                   busqueda={busqueda}
                   mostrarCarrito={mostrarCarrito}
                   onAgregar={agregarAlCarrito}
+                  onVerDetalle={setProductoDetalle}
                 />
               )}
             </section>
@@ -204,6 +213,17 @@ function App() {
           </div>
         )}
       </main>
+
+      {/* Renderizado condicional: la ventana de detalle existe solo si hay producto elegido */}
+      {productoDetalle && (
+        <ModalProducto
+          producto={productoDetalle}
+          enCarrito={Boolean(detalleEnCarrito)}
+          sinStock={Boolean(detalleEnCarrito) && detalleEnCarrito.cantidad >= productoDetalle.stock}
+          onCerrar={cerrarDetalle}
+          onAgregar={agregarAlCarrito}
+        />
+      )}
 
       <Footer />
     </>
